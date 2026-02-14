@@ -83,4 +83,4 @@ This application implements several security measures to ensure a safe browsing 
 
 ## License
 
-ISC
+MIT License
