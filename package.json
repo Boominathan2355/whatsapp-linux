@@ -1,0 +1,60 @@
+{
+  "name": "whatsapp-linux",
+  "productName": "WhatsApp Linux",
+  "version": "1.0.0",
+  "description": "A secure Linux wrapper for WhatsApp Web",
+  "main": "src/main.js",
+  "homepage": "https://github.com/boominathan2355/whatsapp-linux",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boominathan2355/whatsapp-linux.git"
+  },
+  "author": "Boominathan Alagirisamy <[EMAIL_ADDRESS]>",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "dist": "electron-builder",
+    "pack": "electron-builder --dir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.boominathan.whatsapp",
+    "linux": {
+      "maintainer": "Boominathan Alagirisamy <[EMAIL_ADDRESS]>",
+      "target": [
+        "AppImage",
+        "deb",
+        "snap"
+      ],
+      "category": "Network",
+      "icon": "src/assets/icon.png"
+    },
+    "snap": {
+      "confinement": "strict",
+      "plugs": [
+        "default",
+        "camera",
+        "audio-record",
+        "desktop",
+        "desktop-legacy",
+        "x11",
+        "wayland",
+        "unity7",
+        "browser-support",
+        "network",
+        "network-bind",
+        "opengl"
+      ]
+    }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^40.4.1",
+    "electron-builder": "^26.7.0"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1",
+    "electron-store": "^11.0.2"
+  }
+}
